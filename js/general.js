@@ -1,9 +1,60 @@
-// Add filters for conference name. Button for Europe, US, etc.
+// Add button for Europe, US, etc.
+
+
+Vue.component('sorting-filters', {
+    template: `
+        <div class="sorting-filters float-right">SORT BY: &nbsp;
+            <span v-for="(value, key, index) in sortingFilters" 
+                  @click="sortConferences(value, key)"
+                  :class="['sorting-filter', { active: value.active}]"
+            >{{ value.title }}<span v-if="index + 1 < numberOfFilters()">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+            </span>
+        </div>
+    `,
+    methods: {
+        sortConferences: function(value, key) {
+            // Set other filters active and asc values to false
+            for (let filter in this.sortingFilters) {
+                if (this.sortingFilters[filter].asc !== this.sortingFilters[key].asc) {
+                    this.sortingFilters[filter].asc = false;
+                }
+
+                this.sortingFilters[filter].active = false;
+            }
+
+            this.sortingFilters[key].active = true;
+            this.sortingFilters[key].asc = !this.sortingFilters[key].asc;
+
+            this.$emit('apply-sorting', key, this.sortingFilters[key].asc);
+        },
+        // Not sure how to get length of object in a template,
+        // hence this helper method.
+        numberOfFilters: function () {
+            return Object.keys(this.sortingFilters).length
+        }
+    },
+    data() {
+        return {
+            sortingFilters: {
+                startDate: {
+                    title: 'DATE',
+                    active: true,
+                    asc: true
+                },
+                name: {
+                    title: 'NAME',
+                    active: false,
+                    asc: false
+                }
+            }
+        }
+    }
+});
 
 Vue.component('month-buttons', {
     template: `
         <div class="row filter-group months">
-            <div v-for="(value, key) in buttons" class="col-md-1">
+            <div v-for="(value, key) in buttons" class="col-1">
                 <div @click="applyMonths(value, key)"
                      :class="['month', 'filter', 'button', { active: value.active}]"
                 >{{ value.title }}
@@ -94,16 +145,16 @@ Vue.component('conference', {
         }
     },
     template: `
-        <div>
-            <a href="#" class="conference" aria-expanded="false" aria-controls="collapse">
+        <div class="conference">
+            <a :href="'#' + slugify(conference.name) + '-' + slugify(conference.startDate)" class="conf-card" data-toggle="collapse">
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-sm-6 col-md-7">
                         <div class="name">{{ conference.name }}</div>
                         <div class="location text-muted city"><i class="fas fa-map-marker-alt"></i>&nbsp; {{
                             conference.location.city }}, {{ conference.location.country}}
                         </div>
                     </div>
-                    <div class="col-md-4 details">
+                    <div class="col-sm-6 col-md-5 details">
                         <div class="row">
                             <div class="col-md-7">
                                 <div class="date">
@@ -129,14 +180,33 @@ Vue.component('conference', {
                     </div>
                 </div>
             </a>
+            <div class="collapse conf-details" :id="slugify(conference.name) + '-' + slugify(conference.startDate)">
+                <a :href="conference.url" class="conf-url">Go to the conference website &raquo;️</a>
+                <h3 v-if="conference.sessions.length > 0">SESSIONS</h3>
+                <ul class="conf-sessions">
+                    <li v-for="session in conference.sessions">
+                    🗣️ {{ session.speaker }}: {{ session.title }}
+                    </li>
+                </ul>
+            </div>
         </div>
-    `
+    `,
+    methods: {
+        slugify: function(text) {
+            return text.toString().toLowerCase()
+                .replace(/\s+/g, '-')           // Replace spaces with -
+                .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+                .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+                .replace(/^-+/, '')             // Trim - from start of text
+                .replace(/-+$/, '');            // Trim - from end of text
+        }
+    }
 });
 
 Vue.component('weather-buttons', {
     template: `
         <div class="row filter-group">
-            <div v-for="(value, key) in buttons" class="col-md-4">
+            <div v-for="(value, key) in buttons" class="col-4">
                 <div @click="applyWeather(value, key)"
                      :class="['filter', 'button', { active: value.active}]"
                 >{{ value.title }}
@@ -198,7 +268,7 @@ Vue.component('weather-buttons', {
 Vue.component('price-buttons', {
     template: `
         <div class="row filter-group">
-            <div v-for="(value, key) in buttons" class="col-md-4">
+            <div v-for="(value, key) in buttons" class="col-4">
                 <div @click="applyPrice(value, key)"
                      :class="['filter', 'button', { active: value.active}]"
                 >{{ value.title }}
@@ -251,7 +321,7 @@ Vue.component('price-buttons', {
     }
 });
 
-new Vue({
+const app = new Vue({
     el: '#app',
     data: {
         conferences: window.conferences,
@@ -264,13 +334,12 @@ new Vue({
         city: '',
         country: '',
         speaker: '',
-        session: ''
-
+        session: '',
+        sortBy: 'startDate',
+        sortOrder: 'asc',
+        showPast: false
     },
     methods: {
-        filterPrice: function () {
-            console.log('button pressed');
-        },
         updateCost: function (costValue) {
             this.cost = costValue;
         },
@@ -280,11 +349,15 @@ new Vue({
         },
         updateMonths: function (months) {
             this.months = months;
+        },
+        updateSorting: function(sortingFilter, sortingOrder) {
+            this.sortBy = sortingFilter;
+            this.sortOrder = sortingOrder ? 'asc' : 'desc';
         }
     },
     computed: {
-        filteredConferences() {
-            return this.conferences.filter(conference => {
+        filteredConferences(sortBy) {
+            return _.orderBy(this.conferences, this.sortBy, this.sortOrder).filter(conference => {
                 let cityMatch = conference.location.city.toLowerCase().indexOf(this.city.toLowerCase()) > -1;
                 let countryMatch = conference.location.country.toLowerCase().indexOf(this.country.toLowerCase()) > -1;
                 let speakerMatch = false;
@@ -292,10 +365,16 @@ new Vue({
                 let costMatch = false;
                 let weatherMatch = false;
                 let monthsMatch = true;
+                let show = false;
 
-                const date = new Date(conference.startDate * 1000);
+                const confDate = new Date(conference.startDate * 1000);
+                const dateNow = (new Date).getTime();
                 const locale = 'en-us';
-                const conferenceMonth = date.toLocaleString(locale, {month: "short"}).toUpperCase();
+                const conferenceMonth = confDate.toLocaleString(locale, {month: "short"}).toUpperCase();
+
+                if (confDate >= dateNow || this.showPast) {
+                   show = true;
+                }
 
                 if (this.months.length === 0) {
                     monthsMatch = true;
@@ -339,9 +418,13 @@ new Vue({
                     }
                 }
 
-                return cityMatch && countryMatch && costMatch && weatherMatch && monthsMatch && speakerMatch && sessionMatch;
+                return show && cityMatch && countryMatch && costMatch && weatherMatch && monthsMatch && speakerMatch && sessionMatch;
             })
         }
     }
+});
+
+$('button[type="submit"]').click(function () {
+    $('form.subscription').hide();
+    $('.subscription-thank-you').fadeIn(2000);
 })
-;

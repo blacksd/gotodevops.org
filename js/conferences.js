@@ -959,7 +959,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "APR 30 –  May 4",
+                    "APR 30 –  MAY 4",
                 "startDate":
                     1525046400,
                 "weather": {
@@ -985,7 +985,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "May 2 - 3",
+                    "MAY 2 - 3",
                 "startDate":
                     1525262400,
                 "weather": {
@@ -1057,7 +1057,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "May 2 - 4",
+                    "MAY 2 - 4",
                 "startDate":
                     1525248000,
                 "weather": {
@@ -1083,7 +1083,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "May 3 - 4",
+                    "MAY 3 - 4",
                 "startDate":
                     1525348800,
                 "weather": {
@@ -1109,7 +1109,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "May 8 - 10",
+                    "MAY 8 - 10",
                 "startDate":
                     1525737600,
                 "weather": {
@@ -1135,7 +1135,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "May 8 - 11",
+                    "MAY 8 - 11",
                 "startDate":
                     1525737601,
                 "weather": {
@@ -1161,7 +1161,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "May 11 - 12",
+                    "MAY 11 - 12",
                 "startDate":
                     1525996800,
                 "weather": {
@@ -1187,7 +1187,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "May 15",
+                    "MAY 15",
                 "startDate":
                     1526342400,
                 "weather": {
@@ -1213,7 +1213,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "May 15 - 16",
+                    "MAY 15 - 16",
                 "startDate":
                     1526385600,
                 "weather": {
@@ -1239,7 +1239,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "May 15 - 16",
+                    "MAY 15 - 16",
                 "startDate":
                     1526367600,
                 "weather": {
@@ -1265,7 +1265,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "May 15 - 17",
+                    "MAY 15 - 17",
                 "startDate":
                     1526342399,
                 "weather": {
@@ -1291,7 +1291,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "May 15 - 18",
+                    "MAY 15 - 18",
                 "startDate":
                     1526342400,
                 "weather": {
@@ -1317,7 +1317,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "May 16 - 17",
+                    "MAY 16 - 17",
                 "startDate":
                     1526472000,
                 "weather": {
@@ -1343,7 +1343,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "May 17 - 18",
+                    "MAY 17 - 18",
                 "startDate":
                     1526558400,
                 "weather": {
@@ -1369,7 +1369,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "May 23 - 25",
+                    "MAY 23 - 25",
                 "startDate":
                     1527030000,
                 "weather": {
@@ -1395,7 +1395,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "May 23 - 26",
+                    "MAY 23 - 26",
                 "startDate":
                     1527033600,
                 "weather": {
@@ -1421,7 +1421,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "May 24 - 25",
+                    "MAY 24 - 25",
                 "startDate":
                     1527163200,
                 "weather": {
@@ -1447,7 +1447,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "May 28 - 31",
+                    "MAY 28 - 31",
                 "startDate":
                     1527465600,
                 "weather": {
@@ -1473,7 +1473,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "May 29 - 31",
+                    "MAY 29 - 31",
                 "startDate":
                     1527552000,
                 "weather": {
@@ -1499,7 +1499,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "May 30 - 31",
+                    "MAY 30 - 31",
                 "startDate":
                     1527681600,
                 "weather": {
@@ -1525,7 +1525,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "June 1",
+                    "JUN 1",
                 "startDate":
                     1527838200,
                 "weather": {
@@ -1551,7 +1551,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "June 3 - 8",
+                    "JUN 3 - 8",
                 "startDate":
                     1527984000,
                 "weather": {
@@ -1577,7 +1577,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "June 4 - 6",
+                    "JUN 4 - 6",
                 "startDate":
                     1528070400,
                 "weather": {
@@ -1603,7 +1603,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "June 6 – 8",
+                    "JUN 6 – 8",
                 "startDate":
                     1528243200,
                 "weather": {
@@ -1629,7 +1629,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "June 7 - 8",
+                    "JUN 7 - 8",
                 "startDate":
                     1528381800,
                 "weather": {
@@ -1655,7 +1655,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "June 11 - 14",
+                    "JUN 11 - 14",
                 "startDate":
                     1528675200,
                 "weather": {
@@ -1681,7 +1681,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "June 12 - 14",
+                    "JUN 12 - 14",
                 "startDate":
                     1528790400,
                 "weather": {
@@ -1707,7 +1707,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "June 12 - 15",
+                    "JUN 12 - 15",
                 "startDate":
                     1528761600,
                 "weather": {
@@ -1733,7 +1733,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "June 16",
+                    "JUN 16",
                 "startDate":
                     1529143200,
                 "weather": {
@@ -1759,7 +1759,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "June 25 - 26",
+                    "JUN 25 - 26",
                 "startDate":
                     1529884800,
                 "weather": {
@@ -1785,7 +1785,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "June 25 - 27",
+                    "JUN 25 - 27",
                 "startDate":
                     1529917200,
                 "weather": {
@@ -1811,7 +1811,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "June 27 - 29",
+                    "JUN 27 - 29",
                 "startDate":
                     1530100800,
                 "weather": {
@@ -1837,7 +1837,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "July 11 - 12",
+                    "JUL 11 - 12",
                 "startDate":
                     1531400400,
                 "weather": {
@@ -1863,7 +1863,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "July 12 - 13",
+                    "JUL 12 - 13",
                 "startDate":
                     1531396800,
                 "weather": {
@@ -1889,7 +1889,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "July 23 - 24",
+                    "JUL 23 - 24",
                 "startDate":
                     1532347200,
                 "weather": {
@@ -1915,7 +1915,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "August 29 - 31",
+                    "AUG 29 - 31",
                 "startDate":
                     1535500800,
                 "weather": {
@@ -1941,7 +1941,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "September 10 - 11",
+                    "SEP 10 - 11",
                 "startDate":
                     1536580800,
                 "weather": {
@@ -1967,7 +1967,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "September 10 - 13",
+                    "SEP 10 - 13",
                 "startDate":
                     1536537600,
                 "weather": {
@@ -1993,7 +1993,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "September 11 - 12",
+                    "SEP 11 - 12",
                 "startDate":
                     1536667200,
                 "weather": {
@@ -2019,7 +2019,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "September 12 - 13",
+                    "SEP 12 - 13",
                 "startDate":
                     1536753600,
                 "weather": {
@@ -2045,7 +2045,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "September 16 - 19",
+                    "SEP 16 - 19",
                 "startDate":
                     1537056000,
                 "weather": {
@@ -2071,7 +2071,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "September 19 - 20",
+                    "SEP 19 - 20",
                 "startDate":
                     1537358400,
                 "weather": {
@@ -2097,7 +2097,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "September 27 - 28",
+                    "SEP 27 - 28",
                 "startDate":
                     1538049600,
                 "weather": {
@@ -2123,7 +2123,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "October 3 - 4",
+                    "OCT 3 - 4",
                 "startDate":
                     1538553600,
                 "weather": {
@@ -2149,7 +2149,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "October 9 - 11",
+                    "OCT 9 - 11",
                 "startDate":
                     1539043200,
                 "weather": {
@@ -2175,7 +2175,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "October 10 – 11",
+                    "OCT 10 – 11",
                 "startDate":
                     1539129600,
                 "weather": {
@@ -2201,7 +2201,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "October 15 - 18",
+                    "OCT 15 - 18",
                 "startDate":
                     1539561600,
                 "weather": {
@@ -2227,7 +2227,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "October 21 - 23",
+                    "OCT 21 - 23",
                 "startDate":
                     1540080000,
                 "weather": {
@@ -2253,7 +2253,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "October 22 - 24",
+                    "OCT 22 - 24",
                 "startDate":
                     1540166400,
                 "weather": {
@@ -2279,7 +2279,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "October 22 - 25",
+                    "OCT 22 - 25",
                 "startDate":
                     1540166400,
                 "weather": {
@@ -2305,7 +2305,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "October 23 - 24",
+                    "OCT 23 - 24",
                 "startDate":
                     1540296000,
                 "weather": {
@@ -2331,7 +2331,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "October 29 - 31",
+                    "OCT 29 - 31",
                 "startDate":
                     1540684800,
                 "weather": {
@@ -2357,7 +2357,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "November 1 - 2",
+                    "NOV 1 - 2",
                 "startDate":
                     1541073600,
                 "weather": {
@@ -2383,7 +2383,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "November 4 - 9",
+                    "NOV 4 - 9",
                 "startDate":
                     1541721600,
                 "weather": {
@@ -2409,7 +2409,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "November 26 - 30",
+                    "NOV 26 - 30",
                 "startDate":
                     1543190400,
                 "weather": {
@@ -2435,7 +2435,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "December 11 - 13",
+                    "DEC 11 - 13",
                 "startDate":
                     1544486400,
                 "weather": {
@@ -2461,7 +2461,7 @@ window.conferences =
                     }
                 ,
                 "date":
-                    "June 18",
+                    "JUN 18",
                 "startDate":
                     1529308800,
                 "weather": {
