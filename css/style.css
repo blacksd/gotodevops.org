@@ -10,6 +10,12 @@ body {
     color: #333;
 }
 
+@media (max-width: 772px) {
+    *[class^='col-']{
+        /*padding-right: 0;*/
+    }
+}
+
 h1 {
     font-size: 1.25rem;
 }
@@ -74,11 +80,39 @@ nav li {
 
 .filters {
     padding-top: .75rem;
-    padding-right: 2rem;
-    border-right: 1px solid #ececec;
     /*height: 100vh;*/
     /*overflow: hidden;*/
     /*overflow-y: scroll;*/
+}
+
+@media (min-width: 992px) {
+    .filters {
+        padding-right: 2rem;
+        border-right: 1px solid #ececec;
+    }
+}
+
+@media (max-width: 768px) {
+    .filters {
+        padding-right: 15px;
+    }
+
+    .filters .col-4 {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    .filters .col-4:first-of-type {
+        padding-left: 15px;
+    }
+
+    .filters .col-4:last-of-type {
+        padding-right: 15px;
+    }
+
+    .filters .input-group.city {
+        padding-bottom: 2rem;
+    }
 }
 
 .filters a {
@@ -92,8 +126,8 @@ nav li {
 .filter {
     border: 1px solid #e3e3e3;
     text-align: center;
-    font-size: .8rem;
-    text-transform: uppercase;
+    font-size: calc(0.55em + 0.2vw);
+    /*text-transform: uppercase;*/
     padding: .5rem 0;
     border-radius: 5px;
     font-weight: 900;
@@ -118,12 +152,12 @@ nav li {
     border-radius: 0;
 }
 
-.months .col-md-1:first-of-type .month {
+.months .col-1:first-of-type .month {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
 
-.months .col-md-1:last-of-type .month {
+.months .col-1:last-of-type .month {
     border-right: 1px solid #e3e3e3;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -161,9 +195,14 @@ nav li {
 .conferences {
     padding-left: 2rem;
     padding-right: 2rem;
-    height: 100vh;
-    overflow: hidden;
-    overflow-y: scroll;
+}
+
+@media (min-width: 992px) {
+    .conferences {
+        height: 100vh;
+        overflow: hidden;
+        overflow-y: scroll;
+    }
 }
 
 .conference {
@@ -276,6 +315,21 @@ footer {
 }
 
 /***** FORM *****/
+
+.ml-subscribe-form {
+    padding-right: 25px;
+}
+
+
+@media (max-width: 768px) {
+    .ml-subscribe-form button {
+        margin-left: 10px;
+    }
+
+    .ml-subscribe-form .form-row {
+        padding-left: 20px;
+    }
+}
 
 .subscription-thank-you {
     display: none;

@@ -3,12 +3,16 @@
 
 Vue.component('sorting-filters', {
     template: `
-        <div class="sorting-filters float-right">SORT BY: &nbsp;
-            <span v-for="(value, key, index) in sortingFilters" 
-                  @click="sortConferences(value, key)"
-                  :class="['sorting-filter', { active: value.active}]"
-            >{{ value.title }}<span v-if="index + 1 < numberOfFilters()">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-            </span>
+        <div class="row">
+            <div class="col-12">
+                <div class="sorting-filters float-right">SORT BY: &nbsp;
+                    <span v-for="(value, key, index) in sortingFilters" 
+                          @click="sortConferences(value, key)"
+                          :class="['sorting-filter', { active: value.active}]"
+                    >{{ value.title }}<span v-if="index + 1 < numberOfFilters()">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    </span>
+                </div>
+            </div>
         </div>
     `,
     methods: {
